@@ -1,12 +1,12 @@
-# Jetpack Compose Layouts Codelab
+# Bamboo App Clone using Jetpack Compose. Baby steps 🙂
 
-This folder contains the source code for the solution of the
-[Jetpack Compose Layouts codelab](https://developer.android.com/codelabs/jetpack-compose-layouts).
+I am using this project to learn how to build Android UI with [Jetpack Compose](https://developer.android.com/jetpack/compose). 
 
-In this codelab you will learn how layout works in
-[Jetpack Compose](https://developer.android.com/jetpack/compose), how to use the built-in layouts,
-[modifiers](https://developer.android.com/reference/kotlin/androidx/compose/ui/Modifier),
-and you will even build your own custom layout.
+## Resources
+
+* [Google Codelabs](https://developer.android.com/codelabs/jetpack-compose-layouts)
+
+
 
 ## License
 
