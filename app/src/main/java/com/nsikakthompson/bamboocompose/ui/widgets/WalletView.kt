@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 
@@ -41,7 +42,7 @@ fun balanceLayout() {
         Text(
             ".0", Modifier.constrainAs(trailing) {
                 start.linkTo(balance.end)
-                bottom.linkTo(balance.bottom,margin = 4.dp)
+                bottom.linkTo(balance.bottom, margin = 4.dp)
             },
             style = MaterialTheme.typography.body1,
             color = Color.White
@@ -51,6 +52,7 @@ fun balanceLayout() {
     }
 }
 
+@Preview(showBackground = true)
 @Composable
 fun WalletView() {
 
@@ -86,13 +88,13 @@ fun WalletView() {
             color = Color.White,
             style = MaterialTheme.typography.body2,
         )
-        Spacer(modifier = Modifier.height(5.dp))
+        Spacer(modifier = Modifier.height(10.dp))
         Divider(
             color = Color.White,
             thickness = 1.dp,
             modifier = Modifier.width(100.dp)
         )
-        Spacer(modifier = Modifier.height(5.dp))
+        Spacer(modifier = Modifier.height(10.dp))
         Row() {
             Text(
                 "$0.00",
@@ -116,7 +118,6 @@ fun WalletView() {
         }
         Spacer(modifier = Modifier.height(30.dp))
     }
-
 
 
 }

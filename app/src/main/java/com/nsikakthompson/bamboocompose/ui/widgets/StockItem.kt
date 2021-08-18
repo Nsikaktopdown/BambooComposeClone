@@ -22,11 +22,12 @@ fun stockItem(stockImage: Int, name: String, symbol: String, amount: String) {
         Modifier
             .fillMaxWidth()
             .padding(8.dp)
+
     ) {
         val (iconId, symbolId, amountId) = createRefs()
 
         Row(Modifier.constrainAs(iconId) {
-            start.linkTo(parent.start)
+            start.linkTo(parent.start, margin = 15.dp)
             top.linkTo(parent.top)
             bottom.linkTo(parent.bottom)
         }) {
@@ -54,7 +55,7 @@ fun stockItem(stockImage: Int, name: String, symbol: String, amount: String) {
         }
         Row(
             Modifier.constrainAs(amountId) {
-                end.linkTo(parent.end)
+                end.linkTo(parent.end, margin = 15.dp)
                 top.linkTo(parent.top)
                 bottom.linkTo(parent.bottom)
             }

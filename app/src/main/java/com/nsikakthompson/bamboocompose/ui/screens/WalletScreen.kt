@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.constraintlayout.compose.ConstraintLayout
 import com.nsikakthompson.bamboocompose.R
 import com.nsikakthompson.bamboocompose.tools.dividerColor
 import com.nsikakthompson.bamboocompose.ui.disableScrolling
@@ -69,13 +70,41 @@ fun stockView() {
         modifier = Modifier
             .padding(15.dp),
     ) {
+        ConstraintLayout(Modifier.fillMaxWidth()) {
+            val (featured, seeAll, description) = createRefs()
+            Text(
+                "Featured Themes", Modifier.constrainAs(featured){
+                                   start.linkTo(parent.start)                              
+                },
+                style = MaterialTheme.typography.h1.copy(fontSize = 16.sp)
+            
+            )
+            Spacer(modifier = Modifier.height(10.dp))
+            Text(
+                "See All", Modifier.constrainAs(seeAll){
+                    end.linkTo(parent.end)
+                    top.linkTo(featured.top)
+                },
+                style = MaterialTheme.typography.body1.copy(fontSize = 14.sp, color = MaterialTheme.colors.primary),
+
+            )
+            Text(
+                "Check out this categories to discover new stocks", Modifier.constrainAs(description){
+                    start.linkTo(parent.start)
+                    top.linkTo(featured.bottom)
+                },
+                style = MaterialTheme.typography.body1.copy(fontSize = 12.sp)
+
+            )
+        }
+        Spacer(Modifier.height(10.dp))
         chipList()
-        Spacer(Modifier.height(20.dp))
+        Spacer(Modifier.height(30.dp))
         Text(
             "My Stocks",
             style = MaterialTheme.typography.h1.copy(fontSize = 16.sp)
         )
-        Spacer(Modifier.height(10.dp))
+        Spacer(Modifier.height(15.dp))
 
 
     }
@@ -93,22 +122,20 @@ fun WalletScreen() {
                     .fillMaxSize(),
             ) {
                 WalletView()
-
-
             }
         }
         item {
             stockView()
         }
         items(count = dummyStocks.size) { index ->
-            Divider(color = dividerColor, thickness = 0.5.dp)
+            Divider(modifier = Modifier.padding(horizontal = 15.dp),  color = dividerColor, thickness = 0.5.dp)
             stockItem(
                 stockImage = dummyStocks[index].icon,
                 name = dummyStocks[index].name,
                 symbol = dummyStocks[index].symbol,
                 amount = dummyStocks[index].amount
             )
-            Divider(color = dividerColor,  thickness = 0.5.dp)
+            Divider(modifier = Modifier.padding(horizontal = 15.dp),color = dividerColor, thickness = 0.5.dp)
         }
         item {
             Spacer(Modifier.height(40.dp))
