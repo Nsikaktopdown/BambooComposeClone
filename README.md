@@ -10,7 +10,7 @@ I am using this project to learn how to build Android UI with [Jetpack Compose](
 <table style="padding:10px">
   <tr>
     <td> 
-         <img src="https://github.com/Nsikaktopdown/BambooCompose/blob/main/screenshot/Screenshot_20210817_172342.png"  alt="1" width = 279px height = 540px ></td>
+         <img src="https://github.com/Nsikaktopdown/BambooCompose/blob/main/screenshot/Screen%20Shot%202021-08-17%20at%205.27.57%20PM.png"  alt="1" width = 279px height = 540px ></td>
       
   
    <!--<td><img src="./Scshot/trip_end.png" align="right" alt="4" width =  279px height = 496px></td>-->
