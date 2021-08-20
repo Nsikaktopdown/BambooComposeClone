@@ -2,6 +2,8 @@
 
 I am using this project to learn how to build Android UI with [Jetpack Compose](https://developer.android.com/jetpack/compose). 
 
+Check out Article [here](https://nsikaktom.hashnode.dev/building-an-investment-app-ui-with-jetpack-compose-part-1)
+
 ## Resources
 
 * [Google Codelabs](https://developer.android.com/codelabs/jetpack-compose-layouts)
